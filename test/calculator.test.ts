@@ -21,4 +21,15 @@ describe("Calculation", () => {
         expect(add("1,5,6")).toBe(12);
     })
 
+    // return 6 when input is "1\n2,3"
+    test("Return 6 when input is '1\n2,3'",()=>{
+        expect(add("1\n2,3")).toBe(6);
+    })
+
+    // return 6 when input is "1\n2\n3"
+    test("Return 6 when input is '1\n2\n3'",()=>{
+        expect(add("1\n2\n3")).toBe(6);
+    })
+
+
 })

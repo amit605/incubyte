@@ -4,6 +4,6 @@ export function add(numbers:string):number{
         return 0;
     }
     // split the input and convert into number
-    const numArr = numbers.split(",").map( newNum => parseInt(newNum));
+    const numArr = numbers.split(/[\n,]/,).map( newNum => parseInt(newNum));
     return numArr.reduce((sum,current)=>sum + current,0);
 }
