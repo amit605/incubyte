@@ -26,10 +26,13 @@ describe("Calculation", () => {
         expect(add("1\n2,3")).toBe(6);
     })
 
-    // return 6 when input is "1\n2\n3"
-    test("Return 6 when input is '1\n2\n3'",()=>{
-        expect(add("1\n2\n3")).toBe(6);
+    // "negative numbers not allowed"
+    test("Return exception when find any negative number",()=>{
+        try {
+            add("1,-2")
+        } catch (error) {
+            expect(error).toBe("Neagtive numbers not allowed : -1");
+        }
     })
-
 
 })
