@@ -16,4 +16,9 @@ describe("Calculation", () => {
         expect(add("1,5")).toBe(6);
     })
 
+    // return 12 when input is 1,5,6
+    test("Return 12 when input is '1,5,6'",()=>{
+        expect(add("1,5,6")).toBe(12);
+    })
+
 })
